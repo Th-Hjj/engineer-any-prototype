@@ -16,7 +16,7 @@ Start with a rough idea, a short design, one mechanic, or an existing project. T
 
 **Try:** `$engineer-any-prototype Turn this game description into a small playable prototype. Use my existing project, and choose reasonable starting values for any unspecified tuning.`
 
-It works independently or alongside [Prototype Anything](https://github.com/Th-Hjj/prototype-anything). The agent needs access to the relevant project and development tools; it should tell you what it actually ran and what remains unverified.
+It works independently or alongside [Prototype Anything](https://github.com/Th-Hjj/prototype-anything). The agent needs access to the relevant project and development tools.
 
 [Read the skill](./SKILL.md)
 
@@ -34,6 +34,6 @@ It works independently or alongside [Prototype Anything](https://github.com/Th-H
 
 **试试看：** `$engineer-any-prototype 请把这段游戏描述做成一个小型可玩原型。沿用我现有的项目，未确定的调节数值可以先选合理的起始值。`
 
-它可以独立使用，也可以接着 [Prototype Anything](https://github.com/Th-Hjj/prototype-anything) 的讨论继续制作。Agent 需要能访问项目和相应的开发工具，并如实说明实际运行验证过什么、哪些部分仍未验证。
+它可以独立使用，也可以接着 [Prototype Anything](https://github.com/Th-Hjj/prototype-anything) 的讨论继续制作。Agent 需要能访问项目和相应的开发工具。
 
 [查看 Skill 指令](./SKILL.md)
