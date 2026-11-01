@@ -48,6 +48,8 @@ Use grayboxes, placeholder assets, small content sets, and temporary solutions f
 
 Keep changes to existing projects focused and preserve working behavior. Include the feedback and presentation needed to make the intended interaction understandable and playable. Avoid unnecessary UI, explanations, polish, peripheral systems, broad refactors, and general-purpose frameworks. Expose a few consequential, unsettled values as easy-to-find parameters when this helps iteration.
 
+Separate design information from player-facing content. Do not automatically turn the game description, mechanics, design rationale, or development notes into UI text. Player-facing text should serve an immediate action, communicate necessary feedback, or be intentional game content. Prefer letting players understand the game through interaction rather than explanation. Remove redundant instructions, decorative slogans, and developer-facing commentary.
+
 ### 4. Check the result and provide a playable entry point
 
 Test enough to catch issues that matter for the next playtest, including startup, input, and a representative core interaction when the environment supports it. Check important behavior this change could break. Add tests where they resolve a concrete risk; do not build comprehensive test infrastructure before the first playtest.
