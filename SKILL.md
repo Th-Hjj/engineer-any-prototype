@@ -26,7 +26,7 @@ Use the following sequence to move toward something the user can try. Revisit th
 
 ### 1. Understand the experience and inspect the environment
 
-Identify what the player does, what responds, what matters to the experience, and what this round should make playable. Preserve the user's stated constraints and open questions; clarify only what implementation needs now.
+Identify what the player does, how the game responds, and how the interaction is intended to feel. Match the level of presentation to what the user needs to try or judge in this iteration. Infer this from the available description where possible; do not require a formal experience-goal document. Preserve the user's stated constraints and open questions; clarify only what implementation needs now.
 
 For existing projects, inspect the project instructions and the entry points, code, scenes, assets, dependencies, and runtime relevant to the task. Broaden the investigation only when dependencies or observed problems require it. Establish what currently works or fails; do not infer implementation from filenames or old documentation alone.
 
@@ -46,17 +46,19 @@ Connect a real entry point, player input, system behavior, and perceivable feedb
 
 Use grayboxes, placeholder assets, small content sets, and temporary solutions freely. Preserve what the user needs to feel or observe: movement and physics need real behavior when they are central; interactions between players need actual multiplayer in the intended form.
 
-Keep changes to existing projects focused and preserve working behavior. Include the feedback and presentation needed to make the intended interaction understandable and playable. Avoid unnecessary UI, explanations, polish, peripheral systems, broad refactors, and general-purpose frameworks. Expose a few consequential, unsettled values as easy-to-find parameters when this helps iteration.
+Keep changes to existing projects focused and preserve working behavior. Develop the core interaction and its feedback together, within the requested scope. For a player-facing prototype, include basic sound effects for key actions and outcomes by default, unless silence is intentional or the user's scope or constraints exclude them. Use simple animation, visual response, timing, and framing where they support readability and the intended feel. Reuse existing assets or use lightweight placeholders and procedural effects. Keep feedback consistent with the game's tone rather than adding effects indiscriminately.
+
+Defer presentation work that does not help the current playtest, but do not treat basic audiovisual feedback or feel as optional polish. Avoid unnecessary UI, explanations, peripheral systems, broad refactors, and general-purpose frameworks. Expose a few consequential, unsettled values as easy-to-find parameters when this helps iteration.
 
 Separate design information from player-facing content. Do not automatically turn the game description, mechanics, design rationale, or development notes into UI text. Player-facing text should serve an immediate action, communicate necessary feedback, or be intentional game content. Prefer letting players understand the game through interaction rather than explanation. Remove redundant instructions, decorative slogans, and developer-facing commentary.
 
 ### 4. Check the result and provide a playable entry point
 
-Test enough to catch issues that matter for the next playtest, including startup, input, and a representative core interaction when the environment supports it. Check important behavior this change could break. Add tests where they resolve a concrete risk; do not build comprehensive test infrastructure before the first playtest.
+Test enough to catch issues that matter for the next playtest, including startup, input, and a representative core interaction when the environment supports it. When running the prototype, check that key responses can be seen or heard, that their timing supports the interaction, and that the presentation does not obscure play. Check important behavior this change could break. Add tests where they resolve a concrete risk; do not build comprehensive test infrastructure before the first playtest.
 
 For multiplayer, check the intended interaction between participants or instances. Simulated input, a single instance, compilation, or source inspection do not by themselves establish that the core interaction works.
 
-Provide the project or build, its usable entry point, necessary dependencies, brief launch instructions, and controls. Keep the handoff focused on helping the user play or continue. Mention blockers or limitations only when they materially affect that, and never claim results that were not actually observed. Once the requested work is ready to try, hand it over rather than adding speculative improvements that depend on playtest feedback. Leave only the records needed to continue later.
+Provide the project or build, its usable entry point, necessary dependencies, brief launch instructions, and controls. Keep the handoff focused on helping the user play or continue. Mention blockers or limitations only when they materially affect that, and never claim results that were not actually observed. Once the requested interaction and its basic feedback are ready for the user to judge through play, hand it over rather than adding speculative improvements that depend on playtest feedback. Leave only the records needed to continue later.
 
 ### 5. Iterate from what happened during play
 
@@ -64,4 +66,4 @@ Start from the user's concrete observations. Distinguish implementation errors, 
 
 When rules confuse players, consider simplifying the interaction before adding tutorial text, and discuss any change to the user's core design. Return to design or propose a different approach when the experience calls for it. Let evidence and the user's goals drive the next iteration, without a fixed schedule or an obligation to preserve an unsuccessful implementation.
 
-Before handing off, check that the user can follow the launch instructions and operate the intended interaction. Keep the explanation proportional to what they need to try it and continue.
+Before handing off, check that the user can follow the launch instructions, operate the intended interaction, and perceive its key feedback. Keep the explanation proportional to what they need to try it and continue.
