@@ -1,0 +1,4 @@
+interface:
+  display_name: "Engineer Any Prototype"
+  short_description: "Turn game ideas into playable digital prototypes"
+  default_prompt: "Use $engineer-any-prototype to turn this game or system description into a playable digital prototype."
