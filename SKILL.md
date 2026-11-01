@@ -50,11 +50,11 @@ Keep changes to existing projects focused and preserve working behavior. Avoid u
 
 ### 4. Check the result and provide a playable entry point
 
-Run the actual startup path, input, and at least one representative core interaction when the environment supports it. Check important behavior that this change could break. Add tests where they resolve a concrete risk; keep verification proportionate rather than building comprehensive test infrastructure before the first playtest.
+Test enough to catch issues that matter for the next playtest, including startup, input, and a representative core interaction when the environment supports it. Check important behavior this change could break. Add tests where they resolve a concrete risk; do not build comprehensive test infrastructure before the first playtest.
 
-For multiplayer, check the intended interaction between participants or instances. State what simulated input, a single instance, or another limited check actually establishes. Compilation, source inspection, screenshots, and interface state alone do not establish that the core interaction works.
+For multiplayer, check the intended interaction between participants or instances. Simulated input, a single instance, compilation, or source inspection do not by themselves establish that the core interaction works.
 
-Provide the project or build, its usable entry point, necessary dependencies, brief launch instructions, and controls. Concisely distinguish what was implemented, what was actually run and checked, what remains unverified, and known limitations. If tools, permissions, or the runtime prevent execution, report the blocker and the next concrete step; do not claim a successful run or playtest. Leave only the records needed to continue later.
+Provide the project or build, its usable entry point, necessary dependencies, brief launch instructions, and controls. Keep the handoff focused on helping the user play or continue. Mention blockers or limitations only when they materially affect that, and never claim results that were not actually observed. Leave only the records needed to continue later.
 
 ### 5. Iterate from what happened during play
 
@@ -62,4 +62,4 @@ Start from the user's concrete observations. Distinguish implementation errors, 
 
 When rules confuse players, consider simplifying the interaction before adding tutorial text, and discuss any change to the user's core design. Return to design or propose a different approach when the experience calls for it. Let evidence and the user's goals drive the next iteration, without a fixed schedule or an obligation to preserve an unsuccessful implementation.
 
-Before handing off, check that the user can follow the launch instructions, operate the intended interaction, and understand the actual verification status. Keep the explanation proportional to what they need to try it and continue.
+Before handing off, check that the user can follow the launch instructions and operate the intended interaction. Keep the explanation proportional to what they need to try it and continue.
