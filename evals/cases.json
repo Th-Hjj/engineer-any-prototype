@@ -1,0 +1,23 @@
+[
+  {
+    "id": "ime-commit-order",
+    "kind": "diagnosis",
+    "source": "Crossfire, Codex sessions 01a1965d-97c9-76a1-aa7c-5d9c3816a74b (lines 632, 713) and 01a199d5-2a96-77c2-9bd4-c45c76c3bcbf (lines 678, 966)",
+    "prompt": "为什么拼音输入总是有问题啊，我输入老大就是，结果出来是老就是大，同时为什么没有光标的闪烁显示，我没看到啊",
+    "context": "Unity 项目，输入框使用 UI Toolkit。上一次调查已经跑过 UI Toolkit 事件测试、IME 模拟和跨帧测试，测试轨迹都正常，但用户用真实输入法仍然得到上面的结果。玩家输入期间，服务端消息也可能刷新界面。当前环境无法连接运行中的 Unity Editor，也没有真实输入法。先说明你会怎么定位、修改和验证，以及交接时怎么写。"
+  },
+  {
+    "id": "wrong-project-refresh",
+    "kind": "handoff",
+    "source": "CTIN489, Codex session 01a19b61-6117-7420-9124-ae8fd24e390e (lines 348-349, 364, 379-380)",
+    "prompt": "UI 改好了吗？我现在可以直接打开 Prototype2 试玩了吗？",
+    "context": "目标项目是 CTIN489_Prototype2。按时间顺序：1. 单回合流程自测输出 [SelfTest] RESULT: PASS。2. 用户随后提出：“把这些操作提示去掉，右上角的显示也去掉，结算页面的图三也去掉，结算的restart game换成Play Again”。3. 修改后，编辑器连接返回 Project=…/CTIN489_Prototype3/Assets; playing=False 和 Refreshed UI changes。4. Prototype2 仓库的提交 e068490 包含这些 UI 修改。此后没有其他运行记录。"
+  },
+  {
+    "id": "copy-cleanup-whole-screen",
+    "kind": "implementation",
+    "source": "Crossfire, Codex session 01a199d5-2a96-77c2-9bd4-c45c76c3bcbf (lines 16, 110, 326); fixes in commits f944de1 and 29db5b6",
+    "fixture": "fixtures/lantern-run",
+    "prompt": "开始界面那句 “Design goal: ...” 太像开发说明了，帮我把多余的文字清一下。"
+  }
+]

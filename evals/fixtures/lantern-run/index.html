@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Lantern Run</title>
+  <style>
+    body { margin: 0; background: #101418; color: #e8e2d0; font-family: sans-serif; }
+    #game { display: block; margin: 0 auto; background: #05070a; }
+    .panel { position: absolute; left: 50%; transform: translateX(-50%); width: 420px;
+             padding: 16px 20px; border: 2px solid #8a7a52; background: rgba(16, 20, 24, 0.92); }
+    #title { top: 60px; text-align: center; }
+    #title h1 { margin: 0 0 6px; letter-spacing: 2px; }
+    .tagline { margin: 0 0 12px; font-style: italic; color: #b8ad8c; }
+    .design-note { margin: 0 0 12px; font-size: 13px; color: #9aa4ad; }
+    .controls { margin: 0 0 12px; }
+    .dev { margin: 0 0 12px; font-size: 12px; color: #d06a6a; }
+    #tip { top: 330px; min-height: 60px; }
+    #hud { position: absolute; top: 8px; left: 8px; font-size: 14px; }
+    #hud .hint { margin-top: 4px; color: #b8ad8c; }
+    #oilWarning { color: #ffb347; font-weight: bold; display: none; }
+    #gameover { top: 160px; text-align: center; display: none; }
+    button { font-size: 16px; padding: 6px 18px; }
+  </style>
+</head>
+<body>
+  <canvas id="game" width="800" height="560"></canvas>
+
+  <div id="title" class="panel">
+    <h1>LANTERN RUN</h1>
+    <p class="tagline">A game about light, darkness, and the choices in between.</p>
+    <p class="design-note">Design goal: test whether players balance remaining oil against movement speed when lanterns are scarce.</p>
+    <p class="controls">Controls: WASD to move, Space to drop a lantern.</p>
+    <p class="dev">TODO: replace placeholder art before playtest build</p>
+    <button id="start">Start</button>
+  </div>
+
+  <div id="tip" class="panel">
+    <p>Tip: Lanterns light the way. Light helps you see where you are going. Dropping lanterns uses oil, and oil is limited, so think before you drop!</p>
+  </div>
+
+  <div id="hud">
+    <div>Oil: <span id="oil">100</span></div>
+    <div id="oilWarning">Oil low</div>
+    <div class="hint">Press Space to drop a lantern! Use WASD to move around the cave!</div>
+  </div>
+
+  <div id="gameover" class="panel">
+    <h2>Out of oil</h2>
+    <p>The dark thanks you for your donation.</p>
+    <p class="design-note">Playtest question: did you run out because you moved too fast or dropped too many lanterns?</p>
+    <button id="retry">Try again</button>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>

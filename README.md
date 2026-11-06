@@ -1,5 +1,7 @@
 # Engineer Any Prototype
 
+[MIT](LICENSE) · v0.2.0
+
 [English](#english) | [中文](#中文)
 
 ## English
@@ -10,7 +12,7 @@ Start with a rough idea, a short design, one mechanic, or an existing project. T
 
 ### How to use
 
-1. Install or enable the skill in a compatible coding agent, then invoke `engineer-any-prototype` (for example, `$engineer-any-prototype` in Codex).
+1. Copy `skills/engineer-any-prototype` into a compatible coding agent's skills directory (or enable it there), then invoke `engineer-any-prototype` (for example, `$engineer-any-prototype` in Codex).
 2. Share what you want to make playable and any existing project. Mention an engine, platform, or constraint if you already have one; a complete specification is not required.
 3. Try the result and describe what happened. Continue naturally with fixes, changes, or questions.
 
@@ -18,7 +20,7 @@ Start with a rough idea, a short design, one mechanic, or an existing project. T
 
 It works independently or alongside [Prototype Anything](https://github.com/Th-Hjj/prototype-anything). The agent needs access to the relevant project and development tools.
 
-[Read the skill](./SKILL.md)
+[Read the skill](skills/engineer-any-prototype/SKILL.md) · [Regression cases](evals/README.md)
 
 ## 中文
 
@@ -28,7 +30,7 @@ It works independently or alongside [Prototype Anything](https://github.com/Th-H
 
 ### 如何使用
 
-1. 在支持 Skill 的编程 Agent 中安装或启用它，然后调用 `engineer-any-prototype`（例如在 Codex 中使用 `$engineer-any-prototype`）。
+1. 将 `skills/engineer-any-prototype` 复制到支持 Skill 的编程 Agent 的 skills 目录（或在其中启用它），然后调用 `engineer-any-prototype`（例如在 Codex 中使用 `$engineer-any-prototype`）。
 2. 提供想做成可玩版本的描述或已有项目。如果已经确定引擎、平台或其他限制，一起告诉它；不需要准备完整规格。
 3. 试玩后描述实际发生了什么，直接继续讨论修改、修复或下一步。
 
@@ -36,4 +38,4 @@ It works independently or alongside [Prototype Anything](https://github.com/Th-H
 
 它可以独立使用，也可以接着 [Prototype Anything](https://github.com/Th-Hjj/prototype-anything) 的讨论继续制作。Agent 需要能访问项目和相应的开发工具。
 
-[查看 Skill 指令](./SKILL.md)
+[查看 Skill 指令](skills/engineer-any-prototype/SKILL.md) · [回归用例](evals/README.md)

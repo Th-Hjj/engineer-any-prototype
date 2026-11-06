@@ -1,6 +1,8 @@
 ---
 name: engineer-any-prototype
 description: Build and iterate playable digital game prototypes from game descriptions, design notes, individual mechanics, non-digital experiences, or existing projects. Use when a user wants to implement a prototype, make a game system playable, fix or extend a prototype, or act on playtest feedback.
+metadata:
+  version: "0.2.0"
 ---
 
 # Engineer Any Prototype
@@ -36,6 +38,8 @@ For a non-digital experience, identify the behaviors, relationships, and feedbac
 
 Use the project's existing tools and decisions where they fit. Choose the engine, platform, 2D or 3D presentation, and multiplayer approach for the actual experience and available environment. When several approaches fit, consider the user's familiarity and the effort needed to set up, play, modify, and share the prototype—not just how quickly the AI can generate it. Do not default every project to the same stack or silently change a requested platform.
 
+In a Unity, Godot or browser project, read [engine-notes.md](references/engine-notes.md) for entry points and engine-specific pitfalls before editing project files or choosing how to verify.
+
 Briefly explain the next playable scope and any meaningful tradeoff. Prefer a direct implementation over infrastructure for hypothetical future reuse. Research technical questions when they affect the work; run a focused feasibility experiment only for a concrete risk to the core interaction, then bring the result back into the prototype.
 
 If a required capability is unavailable, explain the specific constraint and the closest faithful options. Ask before replacing the core experience with a more convenient substitute.
@@ -50,17 +54,27 @@ Keep changes to existing projects focused and preserve working behavior. Make th
 
 Defer presentation work that does not help the current playtest. Avoid unnecessary UI, explanations, peripheral systems, broad refactors, and general-purpose frameworks. Expose a few consequential, unsettled values as easy-to-find parameters when this helps iteration.
 
-Separate design information from player-facing content. Do not automatically turn game descriptions, mechanics, design rationale, or development notes into UI copy. Keep player-facing text when it supports an action, conveys necessary information the player cannot readily infer, or is intentional game content. Prefer clear controls, visual hierarchy, and feedback over explanations.
+Read [core-interaction-pitfalls.md](references/core-interaction-pitfalls.md) when implementing movement, physics, input or restart behavior. It separates implementation errors to fix directly from feel-relevant parameters that belong to the user.
 
-When creating a screen or asked to simplify UI copy, review all player-visible text across the affected UI, not only the examples the user identifies. Remove redundant helper text, repeated instructions, decorative filler, and developer-facing commentary. After removing text, recompose the layout and spacing instead of leaving empty panels or replacing it with new filler. Preserve necessary accessibility cues and intentional narrative, dialogue, or humor.
+Do not turn game descriptions, design rationale or development notes into UI copy. When creating a screen or simplifying UI copy, review all player-visible text on the affected screens and recompose the layout after removing text. Read [player-facing-text.md](references/player-facing-text.md) before writing or revising player-visible text.
 
 ### 4. Check the result and provide a playable entry point
 
 Test enough to catch issues that matter for the next playtest, including startup, input, and a representative core interaction when the environment supports it. When running the prototype, check that key responses can be seen or heard, that their timing supports the interaction, and that the presentation does not obscure play. Check important behavior this change could break. Add tests where they resolve a concrete risk; do not build comprehensive test infrastructure before the first playtest.
 
+When no one is watching the screen, verify as far up this ladder as the environment allows. Evidence counts only if it comes from the project, build or running process you actually changed, and only if it was collected after the change.
+
+1. The target project or build compiles or loads without errors.
+2. The core interaction runs from the real entry point under scripted input (an automated test, input replay or headless run).
+3. State or logs confirm the expected response.
+4. Captured frames or recordings show the feedback appears at the right moment.
+5. The user plays it — the only rung that judges feel.
+
+Use the cheapest means that reaches each rung; do not build test infrastructure just to climb it.
+
 For multiplayer, check the intended interaction between participants or instances. Simulated input, a single instance, compilation, or source inspection do not by themselves establish that the core interaction works.
 
-Provide the project or build, its usable entry point, necessary dependencies, brief launch instructions, and controls. Keep the handoff focused on helping the user play or continue. Mention blockers or limitations only when they materially affect that, and never claim results that were not actually observed. Once the requested interaction and its basic feedback are ready for the user to judge through play, hand it over rather than adding speculative improvements that depend on playtest feedback. Leave only the records needed to continue later.
+Provide the project or build, its usable entry point, necessary dependencies, brief launch instructions, and controls. Keep the handoff focused on helping the user play or continue. Name the highest verification rung reached and how to check the next one in one line; do not turn it into a verification report. List the provisional values and placeholders you introduced so the user can tell them from their own design. Mention blockers or limitations only when they materially affect play or continuation, and never claim results that were not actually observed. Once the requested interaction and its basic feedback are ready for the user to judge through play, hand it over rather than adding speculative improvements that depend on playtest feedback. Leave only the records needed to continue later.
 
 ### 5. Iterate from what happened during play
 
