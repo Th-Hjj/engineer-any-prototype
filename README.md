@@ -2,6 +2,14 @@
 
 [MIT](LICENSE) · v0.2.0
 
+## Install / 安装
+
+```bash
+npx skills add Th-Hjj/engineer-any-prototype
+```
+
+Add `-g` to install globally. / 加上 `-g` 可安装到用户级。
+
 [English](#english) | [中文](#中文)
 
 ## English
@@ -12,7 +20,7 @@ Start with a rough idea, a short design, one mechanic, or an existing project. T
 
 ### How to use
 
-1. Copy `skills/engineer-any-prototype` into a compatible coding agent's skills directory (or enable it there), then invoke `engineer-any-prototype` (for example, `$engineer-any-prototype` in Codex).
+1. Install with the command above (or copy `skills/engineer-any-prototype` into your coding agent's skills directory), then invoke `engineer-any-prototype` (for example, `$engineer-any-prototype` in Codex).
 2. Share what you want to make playable and any existing project. Mention an engine, platform, or constraint if you already have one; a complete specification is not required.
 3. Try the result and describe what happened. Continue naturally with fixes, changes, or questions.
 
@@ -30,7 +38,7 @@ It works independently or alongside [Prototype Anything](https://github.com/Th-H
 
 ### 如何使用
 
-1. 将 `skills/engineer-any-prototype` 复制到支持 Skill 的编程 Agent 的 skills 目录（或在其中启用它），然后调用 `engineer-any-prototype`（例如在 Codex 中使用 `$engineer-any-prototype`）。
+1. 使用上方命令安装（或手动复制 `skills/engineer-any-prototype` 到编程 Agent 的 skills 目录），然后调用 `engineer-any-prototype`（例如在 Codex 中使用 `$engineer-any-prototype`）。
 2. 提供想做成可玩版本的描述或已有项目。如果已经确定引擎、平台或其他限制，一起告诉它；不需要准备完整规格。
 3. 试玩后描述实际发生了什么，直接继续讨论修改、修复或下一步。
 
