@@ -19,5 +19,37 @@
     "source": "Crossfire, Codex session 01a199d5-2a96-77c2-9bd4-c45c76c3bcbf (lines 16, 110, 326); fixes in commits f944de1 and 29db5b6",
     "fixture": "fixtures/lantern-run",
     "prompt": "开始界面那句 “Design goal: ...” 太像开发说明了，帮我把多余的文字清一下。"
+  },
+  {
+    "id": "scope-replace-placeholder",
+    "kind": "selection",
+    "source": "GO GHOST, Codex session (user report; session ID not recorded)",
+    "thread": "go-ghost-production",
+    "prompt": "旧 Boss 是占位原型，现在重做正式终战。",
+    "context": "GO GHOST 是一个正在开发的游戏。当前的终战 Boss 是灰盒占位实现，新设计还需要试玩调整。"
+  },
+  {
+    "id": "scope-explicit-experiment",
+    "kind": "selection",
+    "source": "GO GHOST, Codex session (user report; session ID not recorded)",
+    "thread": "go-ghost-experiment",
+    "prompt": "在 GO GHOST 里单独搭一个斧头召回实验，我想先验证它好不好玩。",
+    "context": "GO GHOST 是一个正在开发的游戏。"
+  },
+  {
+    "id": "scope-continue-experiment",
+    "kind": "selection",
+    "source": "GO GHOST, Codex session (user report; session ID not recorded)",
+    "thread": "go-ghost-experiment",
+    "prompt": "召回太快，给玩家多一点反应时间。",
+    "context": "同一线程中紧接 scope-explicit-experiment 运行：上一轮已经搭好并交付了斧头召回实验。"
+  },
+  {
+    "id": "scope-declined-discussion",
+    "kind": "selection",
+    "source": "GO GHOST, Codex session (user report; session ID not recorded)",
+    "thread": "go-ghost-discussion",
+    "prompt": "不要用 engineer-any-prototype。我们先讨论 Final Boss Phase 1 怎么打。",
+    "context": "GO GHOST 是一个正在开发的游戏。"
   }
 ]

@@ -1,13 +1,26 @@
 ---
 name: engineer-any-prototype
-description: Build and iterate playable digital game prototypes from game descriptions, design notes, individual mechanics, non-digital experiences, or existing projects. Use when a user wants to implement a prototype, make a game system playable, fix or extend a prototype, or act on playtest feedback.
+description: >-
+  Build a playable game prototype, or implement, fix, and iterate a prototype
+  already established as the current deliverable, from a description, design
+  notes, a single mechanic, or a non-digital game, including an isolated
+  experiment inside an existing project. Use when the user asks for a prototype
+  or prior conversation clearly identifies the work being continued as
+  prototyping. A placeholder implementation, playtest feedback, or an early
+  iteration of a production feature does not establish prototype scope.
 metadata:
-  version: "0.2.0"
+  version: "0.3.0"
 ---
 
 # Engineer Any Prototype
 
 Help the user turn the experience they describe into a digital prototype they can operate, judge, and change. Build the requested experience in playable increments. Prefer the simplest implementation that preserves it, without silently narrowing the user's requirements. Keep the user's creative direction intact while actively handling implementation.
+
+## Confirm prototype scope
+
+Determine scope from what the user wants delivered now. Distinguish references to an old prototype, such as a placeholder being replaced, from requests to build or continue one. An existing game can contain an explicitly requested prototype. Once prototype work is established, carry it into follow-ups without asking the user to restate it. When prototype scope is unclear, continue with the ordinary game-development or design task. Respect an explicit request to avoid this skill throughout the continuing task.
+
+If this skill was loaded for work that is not a prototype, or the user moves from prototyping to production, stop applying its prototype defaults (grayboxes, placeholders, deferred polish, the smallest playable scope, an early playtest handoff) and follow the request and the project's usual standards.
 
 Accept incomplete ideas and local systems. Work directly from the user's input or from Prototype Anything; require neither another skill nor a complete design document, finished game, or formal validation hypothesis.
 
